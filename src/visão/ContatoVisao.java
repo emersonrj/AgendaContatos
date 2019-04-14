@@ -13,5 +13,10 @@ public class ContatoVisao extends FormPadrao{
     // Inserir componentes aqui.
         
     }
+
+    @Override
+    public void salvarVisao() {
+
+    }
     
 }

@@ -10,19 +10,20 @@ abstract public class FormPadrao extends javax.swing.JInternalFrame {
     
 //  Métodos abstratos que serão implementados pela classe filha.
     abstract public void inicializarComponentes();
+    abstract public void salvarVisao();
     
 //  Criando as variáveis para os componentes do painel de Consulta.
     
     JLabel jlConsulta;
     JTextField jtfConsulta;
 
-//   Construtor
+//   Método Construtor
     public FormPadrao() {
         initComponents();
         habilitaBotoes(true);
-        
-        jtfId.setEditable(false);
         habilitaCampos(false);
+        jtfId.setEnabled(false);
+        inicializarComponentes();
         
         // jLabel para consulta
         jlConsulta = new JLabel("Consulta");
@@ -225,6 +226,7 @@ abstract public class FormPadrao extends javax.swing.JInternalFrame {
         
         habilitaBotoes(true);
         habilitaCampos(false);
+        salvarVisao();
     }//GEN-LAST:event_jbSalvarActionPerformed
 
     private void jbCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbCancelarActionPerformed
@@ -265,7 +267,7 @@ abstract public class FormPadrao extends javax.swing.JInternalFrame {
     private javax.swing.JPanel jpnBotoes;
     private javax.swing.JPanel jpnConsulta;
     public javax.swing.JPanel jpnFormulario;
-    private javax.swing.JTextField jtfDescricao;
-    private javax.swing.JTextField jtfId;
+    public javax.swing.JTextField jtfDescricao;
+    public javax.swing.JTextField jtfId;
     // End of variables declaration//GEN-END:variables
 }
